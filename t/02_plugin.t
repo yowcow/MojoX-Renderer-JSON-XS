@@ -1,0 +1,29 @@
+use strict;
+use utf8;
+use warnings;
+use Mojolicious::Lite;
+use JSON::XS qw(decode_json);
+use Test::Mojo;
+use Test::More;
+
+my $app = app;
+$app->plugin('json_xs_renderer');
+
+get '/json' => sub {
+    my $c = shift;
+    $c->render(json => { msg => 'あいうえお' });
+};
+
+{
+    my $t = Test::Mojo->new($app);
+
+    $t->get_ok('/json')->status_is(200);
+
+    my $res = $t->tx->res->body;
+
+    is_deeply decode_json($res),
+              { msg => 'あいうえお' },
+              'Response body is ok';
+};
+
+done_testing;
