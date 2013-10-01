@@ -1,4 +1,4 @@
-package Mojolicious::Plugin::JsonXsRenderer;
+package Mojolicious::Plugin::JSON::XS;
 use strict;
 use warnings;
 use parent qw(Mojolicious::Plugin);
@@ -18,15 +18,15 @@ __END__
 
 =head1 NAME
 
-Mojolicious::Plugin::JsonXsRenderer - MojoX::Renderer::JSON::XS plugin for Mojolicious
+Mojolicious::Plugin::JSON::XS - MojoX::Renderer::JSON::XS plugin for Mojolicious
 
 =head1 SYNOPSIS
 
-    $app->plugin('json_xs_renderer');
+    $app->plugin('JSON::XS');
 
 =head1 DESCRIPTION
 
-Mojolicious::Plugin::JsonXsRenderer plugs L<MojoX::Renderer::JSON::XS> into L<Mojolicious> application.
+Mojolicious::Plugin::JSON::XS plugs L<MojoX::Renderer::JSON::XS> into L<Mojolicious> application.
 
 =head1 METHODS
 

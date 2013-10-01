@@ -29,7 +29,7 @@ MojoX::Renderer::JSON::XS - Fast JSON::XS handler for Mojolicious::Renderer
         my $app = shift;
 
         # Via plugin
-        $app->plugin('json_xs_renderer');
+        $app->plugin('JSON::XS');
 
         # Or manually
         $app->renderer->add_handler(

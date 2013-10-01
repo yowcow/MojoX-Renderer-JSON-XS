@@ -7,7 +7,7 @@ use Test::Mojo;
 use Test::More;
 
 my $app = app;
-$app->plugin('json_xs_renderer');
+$app->plugin('JSON::XS');
 
 get '/json' => sub {
     my $c = shift;
