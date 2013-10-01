@@ -18,7 +18,7 @@ __END__
 
 =head1 NAME
 
-Mojolicious::Plugin::JsonXsRenderer - L<MojoX::Renderer::JSON::XS> plugin
+Mojolicious::Plugin::JsonXsRenderer - MojoX::Renderer::JSON::XS plugin for Mojolicious
 
 =head1 SYNOPSIS
 

@@ -21,7 +21,7 @@ __END__
 
 =head1 NAME
 
-MojoX::Renderer::JSON::XS - Fast L<JSON::XS> renderer for L<Mojolicious::Renderer>
+MojoX::Renderer::JSON::XS - Fast JSON::XS handler for Mojolicious::Renderer
 
 =head1 SYNOPSIS
 
