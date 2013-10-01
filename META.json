@@ -55,5 +55,16 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/yowcow/MojoX-Renderer-JSON-XS/issues"
+      },
+      "homepage" : "https://github.com/yowcow/MojoX-Renderer-JSON-XS",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/yowcow/MojoX-Renderer-JSON-XS.git",
+         "web" : "https://github.com/yowcow/MojoX-Renderer-JSON-XS"
+      }
+   },
    "version" : "0.01"
 }
