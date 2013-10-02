@@ -7,10 +7,7 @@ our $VERSION = "0.01";
 use JSON::XS qw(encode_json);
 
 sub build {
-    sub {
-        my ($renderer, $c, $output, $options) = @_;
-        $$output = encode_json($options->{json});
-    };
+    sub { ${$_[2]} = encode_json($_[3]{json}); };
 }
 
 1;
