@@ -2,7 +2,7 @@ package MojoX::Renderer::JSON::XS;
 use 5.008005;
 use strict;
 use warnings;
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 use JSON::XS qw(encode_json);
 
