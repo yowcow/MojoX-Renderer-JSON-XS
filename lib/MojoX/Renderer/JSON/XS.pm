@@ -1,5 +1,5 @@
 package MojoX::Renderer::JSON::XS;
-use 5.008005;
+use 5.010;
 use strict;
 use warnings;
 our $VERSION = "0.03";
