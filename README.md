@@ -18,7 +18,7 @@ MojoX::Renderer::JSON::XS - Fast JSON::XS handler for Mojolicious::Renderer
 
 # DESCRIPTION
 
-MojoX::Renderer::JSON::XS provides fast [JSON::XS](http://search.cpan.org/perldoc?JSON::XS) renderer to [Mojolicious](http://search.cpan.org/perldoc?Mojolicious) applications.
+MojoX::Renderer::JSON::XS provides fast [JSON::XS](https://metacpan.org/pod/JSON::XS) renderer to [Mojolicious](https://metacpan.org/pod/Mojolicious) applications.
 
 # METHODS
 
@@ -28,9 +28,9 @@ Returns a handler for `Mojolicious::Renderer` that calls `JSON::XS::encode_json`
 
 # SEE ALSO
 
-[JSON::XS](http://search.cpan.org/perldoc?JSON::XS)
-[Mojolicious](http://search.cpan.org/perldoc?Mojolicious)
-[Mojolicious::Renderer](http://search.cpan.org/perldoc?Mojolicious::Renderer)
+[JSON::XS](https://metacpan.org/pod/JSON::XS)
+[Mojolicious](https://metacpan.org/pod/Mojolicious)
+[Mojolicious::Renderer](https://metacpan.org/pod/Mojolicious::Renderer)
 
 # LICENSE
 
