@@ -20,6 +20,7 @@ use Mojolicious::Lite;
 use MojoX::Renderer::JSON::XS;
 use Test::Mojo;
 use Test::More;
+use Test::Pretty;
 
 my $app = app;
 $app->renderer->add_handler(
@@ -32,7 +33,7 @@ get '/blessed' => sub {
     $c->render(json => { blessed => $blessed });
 };
 
-{
+subtest 'Test JSON output' => sub {
     my $t = Test::Mojo->new($app);
 
     $t->get_ok('/blessed')->status_is(200);
