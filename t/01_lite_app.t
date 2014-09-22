@@ -5,6 +5,7 @@ use Mojolicious::Lite;
 use JSON::XS qw(decode_json);
 use Test::Mojo;
 use Test::More;
+use Test::Pretty;
 use MojoX::Renderer::JSON::XS;
 
 my $app = app;
@@ -17,7 +18,7 @@ get '/json' => sub {
     $c->render(json => { msg => 'モダンPerl入門' });
 };
 
-{
+subtest 'Test JSON output' => sub {
     my $t = Test::Mojo->new($app);
 
     $t->get_ok('/json')->status_is(200);
