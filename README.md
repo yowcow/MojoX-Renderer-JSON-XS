@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/yowcow/MojoX-Renderer-JSON-XS.svg)](https://travis-ci.org/yowcow/MojoX-Renderer-JSON-XS)
-
 # NAME
 
 MojoX::Renderer::JSON::XS - Fast JSON::XS handler for Mojolicious::Renderer

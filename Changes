@@ -2,6 +2,11 @@ Revision history for Perl extension MojoX-Renderer-JSON-XS
 
 {{$NEXT}}
 
+0.04 2014-09-22T10:05:10Z
+
+    - Run tests on Perl version 5.10-5.20
+    - Prettified tests with Test::Pretty
+
 0.03 2014-02-06T07:48:26Z
 
     - Added utf8 and convert_blessed flags to module to make it resemble Mojo::JSON a bit more. (stigtsp)
