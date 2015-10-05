@@ -4,7 +4,7 @@
       "yowcow <yowcow@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v2.1.1, CPAN::Meta::Converter version 2.133380",
+   "generated_by" : "Minilla/v2.5.0, CPAN::Meta::Converter version 2.150005",
    "license" : [
       "perl_5"
    ],
@@ -71,5 +71,6 @@
    "x_contributors" : [
       "Stig Palmquist <stig@stig.io>",
       "yowcow <yowcow@gmail.com>"
-   ]
+   ],
+   "x_serialization_backend" : "JSON::PP version 2.27203"
 }
