@@ -5,6 +5,10 @@ use warnings;
 our $VERSION = "0.04";
 
 use JSON::XS;
+use Mojo::Exception ();
+use Mojo::Util qw(monkey_patch);
+
+monkey_patch 'Mojo::Exception', TO_JSON => \&Mojo::Exception::to_string;
 
 our $JSON = JSON::XS->new->utf8->convert_blessed;
 
