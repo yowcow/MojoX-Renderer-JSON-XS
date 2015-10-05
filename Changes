@@ -2,6 +2,9 @@ Revision history for Perl extension MojoX-Renderer-JSON-XS
 
 {{$NEXT}}
 
+    - Patch Mojo::Exception to have method "TO_JSON" since exception is converted into
+      Mojo::Exception object in Mojolicious App
+
 0.04 2014-09-22T10:05:10Z
 
     - Run tests on Perl version 5.10-5.20
