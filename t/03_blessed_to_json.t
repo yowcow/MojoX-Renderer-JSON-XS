@@ -3,13 +3,12 @@ use strict;
 use utf8;
 use warnings;
 
-sub new { bless $_[1] // +{ }, $_[0] }
+sub new { bless $_[1] // +{}, $_[0] }
 
 sub TO_JSON {
     my $self = shift;
     +{ str => $self->{str}, };
 }
-
 
 package main;
 use strict;
@@ -23,9 +22,7 @@ use Test::More;
 use Test::Pretty;
 
 my $app = app;
-$app->renderer->add_handler(
-    json => MojoX::Renderer::JSON::XS->build,
-);
+$app->renderer->add_handler(json => MojoX::Renderer::JSON::XS->build,);
 
 get '/blessed' => sub {
     my $c = shift;
@@ -33,18 +30,22 @@ get '/blessed' => sub {
     $c->render(json => { blessed => $blessed });
 };
 
+get '/mojo_exception' => sub {
+    my $c = shift;
+    my $e = Mojo::Exception->new->_detect('hoge fuga');
+    $c->render(json => { exception => $e });
+};
+
 subtest 'Test JSON output' => sub {
     my $t = Test::Mojo->new($app);
 
-    $t->get_ok('/blessed')->status_is(200);
+    $t->get_ok('/blessed')->status_is(200)->json_is({ blessed => { str => 'あいうえ', }, });
+};
 
-    my $res = $t->tx->res->body;
+subtest 'Test Mojo::Exception output' => sub {
+    my $t = Test::Mojo->new($app);
 
-    is_deeply decode_json($res), {
-        blessed => {
-            str => 'あいうえ',
-        },
-    };
+    $t->get_ok('/mojo_exception')->status_is(200)->json_is({ exception => 'hoge fuga', });
 };
 
 done_testing;
