@@ -32,7 +32,7 @@ get '/blessed' => sub {
 
 get '/mojo_exception' => sub {
     my $c = shift;
-    my $e = Mojo::Exception->new->_detect('hoge fuga');
+    my $e = Mojo::Exception->new('hoge fuga');
     $c->render(json => { exception => $e });
 };
 
