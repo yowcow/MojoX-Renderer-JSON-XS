@@ -1,6 +1,6 @@
 requires 'perl', '5.010001';
 requires 'JSON::XS';
-requires 'Mojolicious';
+requires 'Mojolicious' => '>= 4.0';
 requires 'parent';
 
 on 'test' => sub {
